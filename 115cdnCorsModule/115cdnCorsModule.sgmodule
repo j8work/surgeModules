@@ -1,0 +1,15 @@
+
+#! name=115网盘直链跨域
+#! desc=解决115网盘直链无法跨域问题,如Emby使用的115直链. 欢迎关注 鸡不择食后花园 https://t.me/mjjgarden
+#! category=网络工具
+
+
+
+[MITM]
+hostname = cdnfhnfile.115.com
+
+[Script]
+http-response ^https://cdnfhnfile\.115\.com/ requires-body=0,script-path=https://raw.github.com/j8work/surgeModules/main/115cdnCorsModule/setCors.js
+
+[URL Rewrite]
+# 如果需要的话，还可以添加一些 URL 重写规则
