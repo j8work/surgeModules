@@ -6,7 +6,7 @@
 
 
 [MITM]
-hostname = cdnfhnfile.115.com
+hostname = %APPEND% cdnfhnfile.115.com
 
 [Script]
 http-response ^https://cdnfhnfile\.115\.com/ requires-body=0,script-path=https://raw.github.com/j8work/surgeModules/main/115cdnCorsModule/setCors.js
